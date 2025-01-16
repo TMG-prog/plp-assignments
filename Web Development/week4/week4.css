@@ -1,0 +1,174 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f8ff; 
+    color: #1a1a1a; 
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #2c3e8c, #68696c); 
+    padding: 15px 20px;
+    color: #dde2e3; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 217, 255, 0.6)); 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0px 20px;
+    margin-left: 120px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #82caff;
+    font-size: 1em;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #87ceed; 
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+main .text-content {
+    font-size: 1.2em;
+    color: #1a1a1a; 
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+h1 {
+    color: #6497b1; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4.5rem;
+    margin-bottom: 0;
+}
+
+main .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(52, 118, 232, 0.4); 
+}
+
+footer {
+    background: linear-gradient(90deg, #2c3e8c, #68696c); 
+    color: #e4f0ff; 
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #82caff;
+    font-size: 1em;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: #4a9ef5;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #c0d8ff; 
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #2c3e8c;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -2px 0 6px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        color: #dde2e3;
+    }
+
+    #check:checked ~ nav ul {
+        right: 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
