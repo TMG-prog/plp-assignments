@@ -49,7 +49,7 @@ except Exception as e:
 
 # Data Visualization
 try:
-    # Set a theme for the plots
+    # Seting a theme for the plots
     sns.set_theme(style="whitegrid")
 
     # Line chart 
