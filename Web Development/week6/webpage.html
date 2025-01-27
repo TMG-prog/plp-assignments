@@ -1,100 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            transition: background-color 0.3s ease;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            z-index: 1000;
-        }
-
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-
-        .error {
-            color: red;
-            font-size: 0.9em;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Interactive Webpage</h1>
+<header>
+    <div class="logo">
+        <img src="Tracy.jpg" alt="Logo">
+    </div>
+    <nav>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQs</a></li>
+                 <!-- Button to toggle background color -->
+                  
+                <button id="toggleColor">DarkMode</button>
+</header>
 
-    <!-- Button to toggle background color -->
-    <button id="toggleColor">Toggle Background Color</button>
+
+    <main>
+        <div class="text-content">
+            <h1>ROBOTME</h1>
+            <h2>Simplify your Day, Your Way.</h2>
+            <p>Robot Me is your ultimate personal assistant, combining advanced AI with intuitive design to simplify tasks, boost productivity, 
+                and bring convenience to your fingertips. Experience the future of assistance tailored for you.</p>
+        </div>
+        <div class="image-content">
+           <img src="future.jpg" alt="logoimage">
+        </div>
+
+   
+   
 
     <!-- Slider to adjust paragraph text size -->
-    <h2>Adjust Paragraph Text Size</h2>
+    <h2>Adjust font size</h2>
     <input type="range" id="textSlider" min="12" max="36" value="16">
-    <p id="dynamicText" style="font-size: 16px;">This text size is adjustable.</p>
+   
 
     <!-- Button to open modal -->
-    <button id="openModal">Open Modal</button>
+    <button id="openModal">Registration Form</button>
 
     <!-- Modal -->
     <div id="modalOverlay" class="hidden modal-overlay"></div>
     <div id="modal" class="hidden modal">
         <h3>Modal Window</h3>
-        <p>This is a modal. Click the button below to close it.</p>
-        <button id="closeModal">Close Modal</button>
+        <p>Get Started with your registration today</p>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <span class="error" id="nameError"></span>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <span class="error" id="emailError"></span>
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <span class="error" id="passwordError"></span>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <button id="closeModal">Close Form</button>
     </div>
 
-    <!-- Form with Validation -->
-    <h2>Form with Validation</h2>
-    <form id="myForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required>
-        <span class="error" id="nameError"></span>
-        <br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
-        <span class="error" id="emailError"></span>
-        <br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" required>
-        <span class="error" id="passwordError"></span>
-        <br><br>
-
-        <button type="submit">Submit</button>
-    </form>
-
     <!-- Dropdown Menu -->
-    <h2>Dropdown Menu</h2>
+   
     <select id="dropdown">
-        <option value="">Select an option</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
+        <option value="">Select a robot type</option>
+        <option value="option1">Premium Advanced Assistant</option>
+        <option value="option2">Advanced Personal Assitant</option>
+        <option value="option3">Basic Assistant</option>
     </select>
     <p id="dropdownMessage"></p>
 
-    
+    <script src="webpage.js"></script>
 </body>
 </html>

@@ -1,21 +1,30 @@
 
         // Toggle Background Color
-        const toggleColorButton = document.getElementById("toggleColor");
         let isLight = true;
-
-        toggleColorButton.addEventListener("click", () => {
+        toggleColor.addEventListener("click", () => {
             document.body.style.backgroundColor = isLight ? "#333" : "#fff";
             document.body.style.color = isLight ? "#fff" : "#000";
+        
+           
+            const main = document.querySelector("main");
+            if (main) {
+                main.style.backgroundColor = isLight ? "#333" : "#fff";
+                main.style.color = isLight ? "#fff" : "#000";
+            }
+            toggleColor.textContent = isLight ? " Light Mode" : " Dark Mode";
+    
+            // Toggle the mode flag
+         
             isLight = !isLight;
         });
 
         // Slider to Adjust Text Size
-        const textSlider = document.getElementById("textSlider");
-        const dynamicText = document.getElementById("dynamicText");
+       
+const textSlider = document.getElementById("textSlider");
 
-        textSlider.addEventListener("input", () => {
-            dynamicText.style.fontSize = textSlider.value + "px";
-        });
+textSlider.addEventListener("input", () => {
+    document.documentElement.style.fontSize = textSlider.value + "px";
+});
 
         // Modal Functionality
         const openModalButton = document.getElementById("openModal");
