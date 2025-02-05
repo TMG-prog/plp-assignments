@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-size: cover;
+            margin: 0;
+            height:500px;
+            font-family: "Lato", sans-serif;
+            background: linear-gradient(#a0c4ff, #6096ff, #003366);
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+            color: white;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        .weather-card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            display: none; 
+        }
+        .loading {
+            display: none;
+            color: yellow;
+        }
+        h2 {
+            color: aliceblue;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+        button {
+            margin-bottom: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center">
+    <h1 class="mb-4">🌤️ Weather Today</h1>
+    
+    <form id="weather-form" onsubmit="fetchWeatherByCity(event)">
+        <input type="text" id="city-input" class="form-control w-50 mx-auto" placeholder="Enter city" required>
+        <button type="submit" class="btn btn-primary mt-3">Get Weather</button>
+    </form>
+
+    <p class="loading mt-3">Fetching Weather Data... ⏳</p>
+
+    <div id="weather-card" class="weather-card mt-3">
+        <h2 id="city-name"></h2>
+        <h3 id="temperature"></h3>
+        <p id="condition"></p>
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+    </div>
+
+</div>
+
+
+
+<!--Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!--External script file-->
+<script src="weather.js"></script>
+</body>
+</html>
