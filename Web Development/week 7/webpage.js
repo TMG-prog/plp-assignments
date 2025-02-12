@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2000);
     }
 });
-// Function with parameters and return values (Calculate area and show in modal)
+// Function with parameters and return values 
 function calculateArea() {
     let length = parseFloat(document.getElementById("length").value);
     let width = parseFloat(document.getElementById("width").value);
