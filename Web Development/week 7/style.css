@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Lato'S;
+    font-family: 'Lato';
     margin: 0;
     padding: 0;
     background-color: #f4f8ff;
@@ -14,9 +14,7 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
-.hidden {
-    display: none;
-}
+
 
 /* Header Styling */
 header {
@@ -28,7 +26,10 @@ header {
     color: #dde2e3;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
 }
-
+.button .toggleColor{
+    border-radius: 10px;
+    padding: 5px 5px;
+}
 .logo img {
     height: 60px;
     width: auto;
@@ -62,7 +63,50 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #87ceed;
+    color: #080808;
+}
+/*Modal*/
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    z-index: 1001;
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.modal.show, .modal-overlay.show {
+    display: block;
 }
 
 /* Main Content */
@@ -89,16 +133,33 @@ main {
 .image-content img:hover {
     box-shadow: 0 0 20px rgba(52, 118, 232, 0.8);
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.text-content h1{
+    font-size: 5rem;
+    color: #7bb3ef;
+    opacity: 0; 
+    animation: fadeIn 1.5s ease-out forwards; 
+}
 /* Buttons */
 button {
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: #7ab5f4;
     border: none;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
 }
 
 button:hover {
@@ -111,64 +172,7 @@ button:focus {
     transform: scale(1.1);
 }
 
-/* Modal */
-.modal-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
 
-/* Ensure modal is properly centered and visible */
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    max-width: 90%;
-    z-index: 1001;
-    display: none; /* Hide by default */
-}
-
-/* Overlay for modal background */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: none;
-}
-
-/* When modal is active, show it */
-.modal.show {
-    display: block;
-}
-
-.modal-overlay.show {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.modal {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.hidden {
-    display: none;
-}
 
 /* Loading Banner */
 .loading-banner {
@@ -252,4 +256,19 @@ form input:focus {
     main {
         grid-template-columns: 1fr;
     }
+}
+
+/* Animation for robot movement */
+@keyframes moveRobot {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(0); }
+}
+
+.robot-animation {
+    animation: moveRobot 1s ease-in-out;
+}
+
+.reset-animation {
+    animation: none;
 }

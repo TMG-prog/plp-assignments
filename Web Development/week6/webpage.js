@@ -1,5 +1,4 @@
-
-        // Toggle Background Color
+ // Toggle Background Color
         let isLight = true;
         toggleColor.addEventListener("click", () => {
             document.body.style.backgroundColor = isLight ? "#333" : "#fff";
@@ -26,27 +25,42 @@ textSlider.addEventListener("input", () => {
     document.documentElement.style.fontSize = textSlider.value + "px";
 });
 
-        // Modal Functionality
-        const openModalButton = document.getElementById("openModal");
-        const closeModalButton = document.getElementById("closeModal");
+document.addEventListener("DOMContentLoaded", function () {
+    const openModalBtn = document.getElementById("openModal");
+    const closeModalBtn = document.getElementById("closeModal");
+    const modal = document.getElementById("modal");
+    const modalOverlay = document.getElementById("modalOverlay");
+
+    // Open modal function
+    document.addEventListener("DOMContentLoaded", function () {
+        const openModalBtn = document.getElementById("openModal");
+        const closeModalBtn = document.getElementById("closeModal");
         const modal = document.getElementById("modal");
         const modalOverlay = document.getElementById("modalOverlay");
-
-        openModalButton.addEventListener("click", () => {
-            modal.classList.remove("hidden");
-            modalOverlay.classList.remove("hidden");
-        });
-
-        closeModalButton.addEventListener("click", () => {
-            modal.classList.add("hidden");
-            modalOverlay.classList.add("hidden");
-        });
-
-        modalOverlay.addEventListener("click", () => {
-            modal.classList.add("hidden");
-            modalOverlay.classList.add("hidden");
-        });
-
+    
+        if (openModalBtn && modal && modalOverlay) {
+            // Open modal
+            openModalBtn.addEventListener("click", function () {
+                modal.classList.add("show");
+                modalOverlay.classList.add("show");
+            });
+    
+            // Close modal when clicking close button
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener("click", function () {
+                    modal.classList.remove("show");
+                    modalOverlay.classList.remove("show");
+                });
+            }
+    
+            // Close modal when clicking outside (on overlay)
+            modalOverlay.addEventListener("click", function () {
+                modal.classList.remove("show");
+                modalOverlay.classList.remove("show");
+            });
+        }
+    });
+});    
         // Form Validation
         const form = document.getElementById("myForm");
         const nameInput = document.getElementById("name");
@@ -97,3 +111,11 @@ textSlider.addEventListener("input", () => {
                 : "";
         });
    
+        document.addEventListener("DOMContentLoaded", function () {
+            const loadingSpinner = document.getElementById("loadingSpinner");
+        
+            // Simulate a loading delay
+            setTimeout(() => {
+                loadingSpinner.style.display = "none"; 
+            }, 2000); 
+        });
