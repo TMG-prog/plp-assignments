@@ -1,0 +1,30 @@
+1.
+TensorFlow is an open-source platfrm used by data scientists, software developers and educators for machine learning using data flow graphs.
+FEATURES
+It is open-source that is freely available.
+It is scalable hence supports small-scale and large-scale machine learning applications.
+It supports multiple languages.
+It offers pre-trained models via tensorflow Hub which allows fine-tuning models for specific tasks.
+
+2.
+TensorFlow builds a static computation graph before executing the model while
+PyTorch builds a dynamic builds a static computation graph before executing the model.
+
+3.
+Keras is an open-source deep learning API written in Python.
+It runs on TensorFlow, Microsoft Cognitive Toolkit and Theano.
+
+4.
+ It is simple and efficient therefore easy-to-use API for beginners and experts.
+ It has a wide range of algorithms which includes classification, regression, clustering, and dimensionality reduction.
+ It uses well-established python libraries e.g  NumPy, SciPy and Matplotlib
+ It allows for model selection and evaluation which provides cross-validation.
+
+ 5.
+ Jupyter Notebooks provide an interactive environment for writing, running, and sharing code, especially in Python
+ It has an interactive execution of code which allows one to see output immediately.
+ It supposrts multiple languages such as Python and rangeIt allows for easy sharing of .ipynb files
+ It works with machine learning frameworks such as TensorFlor and Scikit-Learn.
+
+ 6.
+To prevent overfitting in the neural network by randomly dropping a fraction of the neurons during training.
