@@ -1,0 +1,67 @@
+QUESTION ONE
+AI ethics refers to the moral principles and guidelines that govern the development, deployment, and use of AI as a technology.
+ It is important as AI systems can impact individuals and society in significant ways, both positively and negatively. 
+ Ethical AI ensures that technology is used responsibly, avoiding harm and promoting fairness, transparency, and accountability.
+
+Bias and discrimination as AI systems can inherit biases from training data, leading to unfair treatment of certain groups.
+Privacy violations as AI can collect and process vast amounts of personal data, raising concerns about surveillance and misuse.
+
+QUESTION TWO
+Bias in AI occurs when an algorithm produces prejudiced results due to erronous data, design, or implementation.
+It can manifest in areas such as hiring, lending, law enforcement, and healthcare, university selection leading to systemic discrimination.
+Amazon’s AI recruiting tool, was found to favor male candidates over female candidates. The system, trained on past hiring data, learned patterns 
+that reflected gender bias in the industry. As a result,it penalized resumes containing words like "women’s" and favored male-dominated backgrounds.
+This promoted sexism.
+
+QUESTION THREE
+Fairness in AI means ensuring that AI systems do not create or promote discrimination against any group. 
+AI can  discriminate when it is trained on biased data or when algorithms prioritize efficiency over equity.
+Fairness can be promoted on the developer's end by training models using diverse and representative datasets,
+implementing bias detection and mitigation techniques and regularly auditing AI decisions for fairness and accountability.
+
+QUESTION FOUR
+Transparency in AI means making AI decision-making processes understandable and interpretable.
+It enables the users of the AI model to trust it's use.
+A technique that promotes transparency is model interpretability tools, such as SHapley Additive Explanations, which help explain AI decisions.
+Regulations like the EU’s GDPR require organizations to provide explanations for automated decisions affecting individuals.
+
+QUESTION FIVE
+Privacy is an ethical concern in AI as AI systems usually require large datasets that may include sensitive personal information
+which can be misused in the wrong hands.
+Some privacy techniques are 
+Federated learning which allows AI models to train on decentralized data without sharing raw data.
+Differential privacy which adds noise to data to protect individual identities while maintaining overall insights.
+
+QUESTION SIX
+AI-driven automation can transform the workforce in a positive and a negative way.
+On the positive it can increase productivity and efficiency and create new roles in AI development, maintenance and ethics.
+The downside is that automation may displace workers, particularly in repetitive or low-skill jobs and 
+economic inequality may widen if reskilling efforts are not implemented.
+
+QUESTION SEVEN
+On the positive, AI is creating new jobs for developers, it is also automating tasks to help save on resources.
+It is also making some home tasks easier.AI enhances medical diagnostics and personalized treatment plans, leading to better patient outcomes and faster disease detection.
+On the negative, AI is being used to scam people especially the older genertaion who are not farmiliar with it.
+It is also used to propagate fake news which can lead to panic and wrong opinions. It is also used to create fake pornographic content with
+innocent individual faces which damages reputation.
+ AI models can reinforce societal inequalities if they are trained on biased data, affecting hiring, lending, and legal decisions.
+
+To manage these impacts ethically, organizations must implement fairness assessments, transparency measures, and ethical AI regulations. 
+Countries should also implement strict laws banning the use of AI for unethical reasons.
+More people especially the older generations should be educated about AI.
+
+
+QUESTION EIGHT
+Explainable AI (XAI) aims to make AI decision-making understandable to users and stakeholders.
+It is critical in addressing transparency challenges, ensuring that AI-driven decisions are interpretable and accountable.
+The EU’s General Data Protection Regulation supports transparency by granting individuals the "right to explanation," requiring organizations to explain automated decisions
+ that significantly affect users.
+
+QUESTION NINE 
+AI has the potential to revolutionize healthcare by improving diagnostics, treatment plans, and patient care.
+The risks it poses include Privacy concerns where sensitive health data must be protected from misuse.
+Bias in AI models if trained on biased data, AI could provide inaccurate or discriminatory medical recommendations.
+
+QUESTION TEN
+Prioritizing ethical considerations in AI development is essential for building a fair, accountable, and inclusive technological future. 
+Addressing bias, fairness, transparency, and privacy can mitigate risks while maximizing AI’s benefits. Ethical AI practices ensure that AI technologies contribute positively to society, fostering trust and equitable outcomes for all stakeholders.
