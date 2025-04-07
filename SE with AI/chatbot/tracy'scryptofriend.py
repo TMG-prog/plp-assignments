@@ -20,7 +20,7 @@ crypto_db = {
 }
 
 def get_crypto_advice(user_query):
-    if "trending up" in user_query or "price" in user_query:
+    if "trending" in user_query or "price" in user_query:
         trending_coins = [coin for coin, data in crypto_db.items() if data["price_trend"] == "rising"]
         return f"Coins trending up: {', '.join(trending_coins)} 🚀"
 
@@ -35,7 +35,8 @@ def get_crypto_advice(user_query):
     return "I’m not sure about that. Could you clarify your question? "
 
 def main():
-    print("Welcome to CryptoBuddy! How can I assist you today?")
+    print("Remember to do your reseach as crypto currency is risky!")
+    print("Welcome I am Tracy's cypro friend! How can I assist you today?")
 
     while True:
         user_query = input("You: ")
